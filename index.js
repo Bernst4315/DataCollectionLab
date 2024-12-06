@@ -5,7 +5,7 @@ let row1 = "";
 let row2 = "";
 let row3 = "";
 let row4 = "";
-  let count = 0; 
+let count = 0; 
 
 for (const char of str){
     
@@ -14,7 +14,7 @@ for (const char of str){
   if (char !== "\n" && count === 1) row2 = row2 + char; 
   if (char !== "\n" && count === 2) row3 = row3 + char;
   if (char !== "\n" && count === 3) row4 = row4 + char;
-  console.log(count, char);
+  //console.log(count, char); //This keeps track of what is going on inside the loop
      
 }
 
@@ -23,3 +23,12 @@ console.log("row 1 " + row1);
 console.log("row 2 " + row2);
 console.log("row 3 " + row3);
 console.log("row 4 " + row4);
+
+let arr = [];
+
+for(i = 0; i < 5; i++){  
+    arr.push([])
+}
+
+console.log(arr);
+//goal [[],[],[],[],[]]
