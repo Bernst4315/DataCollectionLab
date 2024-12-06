@@ -4,7 +4,7 @@ let arr = [];
 let arr2 = str.split("\n");
 
 for(i = 0; i < 5; i++){  
-    arr.push([arr2[i]])
+    arr.push(arr2[i].split(","))
 }
 
 console.log(arr);
