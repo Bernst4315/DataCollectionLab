@@ -14,9 +14,13 @@ let obj = {};
 
 for(let i = 0; i < arr[0].length; i++){
     let prop = arr[0][i].toLowerCase();
-    let value = arr[1][i];
-    obj[prop] = value; 
+    for(let j = 0; j < arr[0][j].length; j++){ 
+        let value = arr[1][i];
+        obj[prop] = value; 
 }
+ newArr.push(obj);   
+}
+
 
 //create new array to fill w/ objects
 //arr[0] - turn into properties for each object (spread operator might be used)
@@ -29,3 +33,4 @@ for(let i = 0; i < arr[0].length; i++){
 // obj[str2.toLowerCase()] = arr[1][0];// bracket notation
 
 console.log(obj);
+console.log(newArr)
