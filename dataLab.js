@@ -55,17 +55,19 @@ let getProp = [];
 let getVal = [];
 let arrFinal = [];
 
+
 for(let i = 0; i < newArr.length; i++){
 let getObj = newArr[i];
     if(getObj === newArr[0]) getProp = Object.keys(newArr[0]);
     getVal = Object.values(newArr[i]);
-    arrFinal.push(getVal);
+    arrFinal.push(getVal.join());
 }
 
-arrFinal.unshift(getProp)
 
-console.log("Final Array");
-console.log(arrFinal);
 
+arrFinal.unshift(getProp.join());
+const csv = arrFinal.join("\n").toString();
+
+console.log(csv);
 
     
