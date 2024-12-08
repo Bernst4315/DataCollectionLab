@@ -57,17 +57,37 @@ let arrFinal = [];
 
 for(let i = 0; i < newArr.length; i++){
 let getObj = newArr[i];
-for (const property in getObj) {
-    if(getObj === newArr[0]) getProp.push(property);
-    getVal.push(getObj[property]);
-};
-arrFinal.push(getVal);
+    if(getObj === newArr[0]) {
+        for (const property in getObj) {
+        getProp.push(property);
+        }
+    };
+    
+    getVal = Object.values(newArr[i]);
+    arrFinal.push(getVal)
+// for(let i = 0; i < arr.length; i++){
+// for(const value of Object.values(newArr[i])){
+//     //console.log("value test")
+//     getVal.push(value);
+    
+// }//break;
 }
 
-arrFinal.push(getProp)
-//for (const property in getObj) getVal.push(getObj[property]);
+let test = "";
 
+;
+//}
+
+arrFinal.unshift(getProp)
+//for (const property in getObj) getVal.push(getObj[property]);
+console.log("Final Array");
 console.log(arrFinal);
+console.log(test);
+// console.log("end");
+// console.log(getVal);
+// console.log("New Aray Detials");
+// console.log(newArr.length);
+// console.log(newArr)
 
 // if("id" in newArr[0]) test.push("Id");
     
