@@ -50,18 +50,23 @@ console.log(aveAge);
 
 //Part 4: turning an array of objects back into a cvs string
 
-let getObj = newArr[0];
+
 let getProp = [];
 let getVal = [];
 let arrFinal = [];
 
+for(let i = 0; i < newArr.length; i++){
+let getObj = newArr[i];
 for (const property in getObj) {
-    getProp.push(property);
+    if(getObj === newArr[0]) getProp.push(property);
     getVal.push(getObj[property]);
 };
+arrFinal.push(getVal);
+}
+
 arrFinal.push(getProp)
 //for (const property in getObj) getVal.push(getObj[property]);
-arrFinal.push(getVal);
+
 console.log(arrFinal);
 
 // if("id" in newArr[0]) test.push("Id");
