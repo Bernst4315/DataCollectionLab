@@ -34,8 +34,8 @@ console.log(newArr);
 newArr.pop();
 newArr.splice(1, 0, {id: "48", name: "Berry", occupation: "Runner", age: "25"})
 newArr.push({id: "7", name: "Bilbo", occupation: "None", age: "111"})
-console.log(newArr)
-let aveAge = 0;
+console.log(newArr);
+
 let ageTotal = 0; 
 
 for(i = 0; i < newArr.length; i++){
@@ -44,6 +44,25 @@ for(i = 0; i < newArr.length; i++){
     
 }
 
-aveAge = ageTotal/newArr.length; 
+const aveAge = ageTotal/newArr.length; 
 
 console.log(aveAge);
+
+//Part 4: turning an array of objects back into a cvs string
+
+let getObj = newArr[0];
+let getProp = [];
+let getVal = [];
+let arrFinal = [];
+
+for (const property in getObj) {
+    getProp.push(property);
+    getVal.push(getObj[property]);
+};
+arrFinal.push(getProp)
+//for (const property in getObj) getVal.push(getObj[property]);
+arrFinal.push(getVal);
+console.log(arrFinal);
+
+// if("id" in newArr[0]) test.push("Id");
+    
